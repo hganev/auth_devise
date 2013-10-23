@@ -14,7 +14,7 @@ class DestinationsController < ApplicationController
   # GET /destinations/1.json
   def show
     @destination = Destination.find(params[:id])
-
+    @trip = Trip.find params[:trip_id]
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @destination }
@@ -47,7 +47,7 @@ class DestinationsController < ApplicationController
 
     respond_to do |format|
       if @destination.save
-        format.html { redirect_to @destination, notice: 'Destination was successfully created.' }
+        format.html { redirect_to trip_destination_path(@trip, @destination), notice: 'Destination was successfully created.' }
         format.json { render json: @destination, status: :created, location: @destination }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class DestinationsController < ApplicationController
 
     respond_to do |format|
       if @destination.update_attributes(params[:destination])
-        format.html { redirect_to @destination, notice: 'Destination was successfully updated.' }
+        format.html { redirect_to trip_destination_path(@destination.trip, @destination), notice: 'Destination was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
