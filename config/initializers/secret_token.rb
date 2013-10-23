@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-AuthDevise::Application.config.secret_token = 'ce732e0277ebf6a65c6682f33c079237f59cb25e82c94290d1edd597bc8e4063a54792e964d448246b1c4b7090dfce452110bd779afc7aa62853aa5b24dd3bf4'
+Wanderr::Application.config.secret_token = '8a2ab8e2e817a2739b28044085d56cb4cc0cc7d466b121db1f3600f208e074594e56c9e62631d326713c2d5a2490bb51da2305598e81df3a5e057e014696703e'

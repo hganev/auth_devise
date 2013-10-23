@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-AuthDevise::Application.load_tasks
+Wanderr::Application.load_tasks

@@ -1,4 +1,12 @@
-AuthDevise::Application.routes.draw do
+Wanderr::Application.routes.draw do
+  resources :destinations, only: :index
+
+
+  resources :trips do
+	resources :destinations
+  end
+  root to: 'trips#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
