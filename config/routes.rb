@@ -1,4 +1,6 @@
 Wanderr::Application.routes.draw do
+  devise_for :users
+
   resources :destinations, only: :index
 
 

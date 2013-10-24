@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer', :require => 'v8'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
