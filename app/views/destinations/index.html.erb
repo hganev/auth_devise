@@ -14,8 +14,11 @@
     <td><%= destination.name %></td>
     <td><%= destination.description %></td>
     <td><%= link_to 'Show', trip_destination_path(destination.trip, destination)%></td>
+    
+    <% if user_signed_in? && current_user == destination.trip.user %>
     <td><%= link_to 'Edit', edit_trip_destination_path(destination.trip, destination) %></td>
     <td><%= link_to 'Destroy', trip_destination_path(destination.trip, destination), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
